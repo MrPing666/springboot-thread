@@ -1,4 +1,4 @@
-package com.ping.thread.entity;
+package com.ping.thread.entity.enums;
 
 /**
  * Created by Mr.Ping on 2018/5/29.

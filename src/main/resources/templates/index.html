@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <link th:href="@{/static/css/bootstrap.min.css}" rel="stylesheet" type="text/css"/>
-    <script th:src="@{/static/js/scripts/jquery.min.js}"></script>
+    <script th:src="@{/static/js/scripts/jquery-1.11.3.min.js}"></script>
     <script th:src="@{/static/js/bootstrap/bootstrap.min.js}"></script>
     <title>Title</title>
     <style>
@@ -23,18 +23,26 @@
 
 <body>
 <div class="container">
+    <!--<form class="form-signin">-->
+        <!--<h2 class="form-signin-heading">Please sign in</h2>-->
+        <!--<label for="username" class="sr-only">username</label>-->
+        <!--<input type="text" id="username" class="form-control" placeholder="username"/>-->
+        <!--<label for="password" class="sr-only">Password</label>-->
+        <!--<input type="password" id="password" class="form-control" placeholder="password"/>-->
+        <!--<div class="checkbox">-->
+            <!--<label>-->
+                <!--<input type="checkbox" value="remember-me"/> remember me-->
+            <!--</label>-->
+        <!--</div>-->
+        <!--<button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>-->
+    <!--</form>-->
     <form class="form-signin">
-        <h2 class="form-signin-heading">Please sign in</h2>
-        <label for="username" class="sr-only">username</label>
-        <input type="text" id="username" class="form-control" placeholder="username"/>
-        <label for="password" class="sr-only">Password</label>
-        <input type="password" id="password" class="form-control" placeholder="password"/>
-        <div class="checkbox">
-            <label>
-                <input type="checkbox" value="remember-me"/> remember me
-            </label>
+        <div class="btn-group btn-group-lg">
+            <a type="button" class="btn btn-primary btn-block" href="/task/pDynamic.html">发动态</a>
+            <a type="button" class="btn btn-primary btn-block" href="/task/giveGift.html">送礼物</a>
+            <a type="button" class="btn btn-primary btn-block" href="/task/sendMessage.html">发消息</a>
+            <a type="button" class="btn btn-primary btn-block" href="/task/giveReward.html">发红包</a>
         </div>
-        <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
     </form>
 
 </div>

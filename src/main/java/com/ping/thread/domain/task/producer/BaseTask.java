@@ -1,8 +1,10 @@
 package com.ping.thread.domain.task.producer;
 
 import com.ping.thread.domain.task.TaskData;
-import com.ping.thread.entity.TaskType;
+import com.ping.thread.entity.enums.TaskType;
 import com.ping.thread.utils.DateUtils;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import java.util.Date;
 import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.LinkedBlockingQueue;
@@ -15,6 +17,8 @@ import java.util.concurrent.LinkedBlockingQueue;
 public abstract class BaseTask extends Task{
 
     private static BlockingQueue<TaskData> queue = new LinkedBlockingQueue<TaskData>();
+
+    private static final Logger logger = LoggerFactory.getLogger(BaseTask.class);
 
     private Long userNo;
 
@@ -51,6 +55,7 @@ public abstract class BaseTask extends Task{
             String day = DateUtils.formatDate(new Date(), "yyyy-MM-dd");
             TaskData data = new TaskData(day, userNo, getSingleScore(), getMaxScore(), getTaskType());
             queue.put(data);
+            logger.info(getTaskType()+"积分任务入缓存---数量："+queue.size());
         } catch (Exception e) {
             // TODO: handle exception
             e.printStackTrace();

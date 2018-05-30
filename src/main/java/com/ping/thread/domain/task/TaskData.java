@@ -1,6 +1,6 @@
 package com.ping.thread.domain.task;
 
-import com.ping.thread.entity.TaskType;
+import com.ping.thread.entity.enums.TaskType;
 
 /**
  * Created by Mr.Ping on 2018/5/29.

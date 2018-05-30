@@ -10,9 +10,16 @@ import java.util.List;
  * @version 1.0
  */
 public interface TaskTabService {
-
+    /**
+     * 提交积分任务
+     * @param task
+     */
     void submitDayTask(Task task);
 
+    /**
+     * 积分任务批量入库
+     * @param list
+     */
     void batchPutTaskTab(List<TaskData> list);
 
 }

@@ -1,11 +1,11 @@
-package com.ping.thread.entity;
+package com.ping.thread.entity.enums;
 
 /**
  * Created by Mr.Ping on 2018/5/29.
  * @author Mr.Ping
  * @version 1.0
  */
-public enum GetScoreType {
+public enum ScoreState {
     Initialize("初始化状态"),
     NoGet("未到帐"),
     Get("已到账");
@@ -15,7 +15,7 @@ public enum GetScoreType {
         return text;
     }
 
-    GetScoreType(String text) {
+    ScoreState(String text) {
         this.text = text;
     }
 }

@@ -23,12 +23,12 @@ public class TaskUtil {
 		initConsumerThread();
 	}
 	
-	public static void submitTask(Task producer) {
-		executorService.submit(producer);
+	public static void submitTask(Task task) {
+		executorService.submit(task);
 	}
 	
 	private static void initConsumerThread() {
-		logger.info("初始化每日任务消费者线程");
+		logger.info("初始化积分任务消费者线程");
 		TaskConsumer con1 = new TaskConsumer("task_consumer_1", BaseTask.getQueue());
 		TaskConsumer con2 = new TaskConsumer("task_consumer_2", BaseTask.getQueue());
 		TaskConsumer con3 = new TaskConsumer("task_consumer_3", BaseTask.getQueue());
