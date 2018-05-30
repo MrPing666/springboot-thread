@@ -1,4 +1,3 @@
-# springboot-thread
 
 简化的每日积分任务（BlockingQueue、ExecutorService）
 1.生产者线程把积分任务数据存入BlockingQueue
