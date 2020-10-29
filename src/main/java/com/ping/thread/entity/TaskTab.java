@@ -56,19 +56,19 @@ public class TaskTab {
         /**每天的任务得分有最大值**/
         if(this.taskSum < maxScore){
             Long sum = this.taskSum + singleScore;
-            ScoreChangeRecord scoreChangeRecord;
+            ScoreRecord scoreRecord;
             if(sum > maxScore){
                 Long subScore = maxScore - this.taskSum;
                 this.notGetTaskSum = this.notGetTaskSum + subScore;
-                scoreChangeRecord = new ScoreChangeRecord(this.userNo,subScore, ScoreType.valueOf(taskType.toString()), ChangeType.add);
+                scoreRecord = new ScoreRecord(this.userNo,subScore, ScoreType.valueOf(taskType.toString()), ChangeType.add);
                 this.taskSum = maxScore;
             }else{
                 this.taskSum = sum;
                 this.notGetTaskSum = this.notGetTaskSum + singleScore;
-                scoreChangeRecord = new ScoreChangeRecord(this.userNo,singleScore, ScoreType.valueOf(taskType.toString()), ChangeType.add);
+                scoreRecord = new ScoreRecord(this.userNo,singleScore, ScoreType.valueOf(taskType.toString()), ChangeType.add);
             }
             this.getScoreType = ScoreState.NoGet;
-            Registry.queryBean(ScoreRecordRepository.class).save(scoreChangeRecord);
+            Registry.queryBean(ScoreRecordRepository.class).save(scoreRecord);
             return true;
         }
         return false;

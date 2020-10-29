@@ -1,6 +1,6 @@
 package com.ping.thread.repository;
 
-import com.ping.thread.entity.ScoreChangeRecord;
+import com.ping.thread.entity.ScoreRecord;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
@@ -10,13 +10,13 @@ import org.springframework.stereotype.Repository;
  * @version 1.0
  */
 @Repository
-public interface ScoreRecordRepository extends JpaRepository<ScoreChangeRecord,Long> {
+public interface ScoreRecordRepository extends JpaRepository<ScoreRecord,Long> {
 
     /**
      * 入库
-     * @param scoreChangeRecord
+     * @param scoreRecord score change record
      * @return
      */
     @Override
-    ScoreChangeRecord save(ScoreChangeRecord scoreChangeRecord);
+    ScoreRecord save(ScoreRecord scoreRecord);
 }

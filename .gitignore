@@ -1,0 +1,45 @@
+### Maven ###
+.mvn
+target/
+out/
+META-INF/
+
+### NOT MAVEN PROJECT ###
+WebRoot/WEB-INF/classes/
+.mymetadata
+.tern-project
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+
+### IntelliJ IDEA ###
+.idea
+mvnw.cmd
+mvnw
+*.iws
+*.iml
+*.ipr
+
+### NetBeans ###
+nbproject/private/
+/build/
+nbbuild/
+/dist/
+nbdist/
+.nb-gradle/
+
+### macOS ###
+.DS_Store
+Thumbs.db
+
+### AWS ###
+.aws-sam/build/Function/
+/classes/artifacts/
+
+### SVN ###
+.svn

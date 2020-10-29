@@ -1,7 +1,7 @@
 package com.ping.thread.service;
 
-import com.ping.thread.domain.task.TaskData;
-import com.ping.thread.domain.task.producer.Task;
+import com.ping.thread.task.TaskData;
+import com.ping.thread.task.producer.base.Task;
 import java.util.List;
 
 /**
@@ -12,13 +12,13 @@ import java.util.List;
 public interface TaskTabService {
     /**
      * 提交积分任务
-     * @param task
+     * @param task task
      */
     void submitDayTask(Task task);
 
     /**
      * 积分任务批量入库
-     * @param list
+     * @param list TaskData List
      */
     void batchPutTaskTab(List<TaskData> list);
 
