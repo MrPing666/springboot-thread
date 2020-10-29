@@ -1,11 +1,10 @@
 
-简化的每日积分任务（BlockingQueue、ExecutorService）
+简化的每日积分任务（LinkedBlockingQueue、ExecutorService）
 1.生产者线程把积分任务数据存入BlockingQueue
 2.消费者线程把BlockingQueue中的积分任务数据取出入库
 
-BlockingQueue(阻塞队列)
-1.BlockingQueue 是一个先进先出的队列（Queue)
-2.为什么说是阻塞（Blocking）的呢？
-是因为当获取队列元素但是队列为空时，会阻塞等待队列中有元素再返回；
-也支持添加元素时，如果队列已满，那么等到队列可以放入新元素时再放入;
+LinkedBlockingQueue
+    1.基于链表的阻塞队列,当队列缓冲区达到最大值缓存容量时会阻塞生产者队列，直到消费者从队列中消费掉一份数据，生产者线程会被唤醒，反之对于消费者这端的处理也基于同样的原理。
+    2.而LinkedBlockingQueue之所以高效，还因为其对于生产者端和消费者端分别采用了独立的锁来控制数据同步，这也意味着在高并发的情况下生产者和消费者可以并行地操作队列中的数据，以此来提高整个队列的并发性能。
+    3.需要注意的是，如果构造一个LinkedBlockingQueue对象，而没有指定其容量大小，LinkedBlockingQueue会默认一个类似无限大小的容量（Integer.MAX_VALUE），这样的话，如果生产者的速度一旦大于消费者的速度，也许还没有等到队列满阻塞产生，系统内存就有可能已被消耗殆尽了。
 

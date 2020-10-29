@@ -17,7 +17,7 @@ import java.util.concurrent.LinkedBlockingQueue;
 @Slf4j
 public abstract class BaseTask extends Task {
 
-    private static BlockingQueue<TaskData> queue = new LinkedBlockingQueue<>();
+    private static BlockingQueue<TaskData> queue = new LinkedBlockingQueue<>(100);
 
     private Long userNo;
 
