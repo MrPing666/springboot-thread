@@ -1,6 +1,7 @@
 package com.ping.thread.service;
 
 import com.ping.thread.task.TaskData;
+import com.ping.thread.task.consumer.TaskUtil;
 import com.ping.thread.task.producer.base.Task;
 import com.ping.thread.entity.TaskTab;
 import com.ping.thread.entity.enums.TaskType;
