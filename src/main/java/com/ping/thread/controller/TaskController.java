@@ -1,15 +1,16 @@
 package com.ping.thread.controller;
 
+import com.ping.thread.service.TaskTabService;
+
 import com.ping.thread.task.producer.DynamicTask;
 import com.ping.thread.task.producer.GiftTask;
 import com.ping.thread.task.producer.MessageTask;
 import com.ping.thread.task.producer.RewardTask;
-import com.ping.thread.service.TaskTabService;
-
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import javax.annotation.Resource;
+
 
 /**
  * Created by Mr.Ping on 2018/5/29.
@@ -24,7 +25,7 @@ public class TaskController {
     @Resource
     private TaskTabService taskTabService;
 
-    @RequestMapping("/pDynamic.html")
+    @RequestMapping("/dynamic.html")
     public String publishDynamic(){
         try{
             taskTabService.submitDayTask(new DynamicTask(232323L));
